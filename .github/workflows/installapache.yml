@@ -10,7 +10,7 @@ on:
 
 jobs:
   install-apache:
-    runs-on: damianl-ltm7hmy
+    runs-on: self-hosted
     steps:
     - name: Checkout del repositorio
       uses: actions/checkout@v3
