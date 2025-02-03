@@ -15,11 +15,11 @@ jobs:
     - name: Checkout del repositorio
       uses: actions/checkout@v3
 
-    - name: Actualizar repositorios
-      run: sudo apt update
+    - name: Actualizar Homebrew
+      run: brew update
 
     - name: Instalar Apache2
-      run: sudo apt -y install apache2
+      run: brew install httpd
 
     - name: Verificar estado de Apache2
-      run: systemctl status apache2
+      run: sudo apachectl start
