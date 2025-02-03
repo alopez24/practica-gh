@@ -15,6 +15,12 @@ jobs:
     - name: Checkout del repositorio
       uses: actions/checkout@v3
 
+    - name: Instalar Homebrew
+      run: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.bash_profile
+        source ~/.bash_profile
+
     - name: Actualizar Homebrew
       run: brew update
 
